@@ -1,7 +1,7 @@
 class SchedulingsController < ApplicationController
   def index
-    @schedulings = Scheduling.all
-    @scheduling = Scheduling.new
+    @schedules = Schedules.all
+    @schedules = Schedules.new
   end
 
   def new
