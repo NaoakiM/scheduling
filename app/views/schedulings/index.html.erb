@@ -19,10 +19,10 @@
   </thead>
 
   <tbody>
-    <% @schdulings.each do |schduling| %>
+    <% @schedulings.each do |scheduling| %>
       <tr>
-        <td><%= link_to schduling.title , schduling %></td>
-        <td><%= schduling.start_time.strftime("%m-%d") %></td>
+        <td><%= link_to scheduling.title , scheduling %></td>
+        <td><%= scheduling.start_time.strftime("%m-%d") %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,7 +30,7 @@
 
 
 
-<%= form_with(model: @schduling, local: true) do |form| %>
+<%= form_with(model: @scheduling, local: true) do |form| %>
 
   <div class="title">
     <div class="form-tag">タイトル</div>
@@ -59,12 +59,12 @@
 
 <br>
 <div class="col-md-8">
-<%= month_calendar events: @schedulings do |date, schdulings| %>
+<%= month_calendar events: @schedulings do |date, schedulings| %>
   <%= date.day %>
 
-  <% schdulings.each do |schduling| %>
+  <% schedulings.each do |schduling| %>
     <div>
-      <%= link_to schduling.title, schduling %>
+      <%= link_to scheduling.title, scheduling %>
     </div>
   <% end %>
 <% end %>

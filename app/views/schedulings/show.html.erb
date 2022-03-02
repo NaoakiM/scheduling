@@ -2,20 +2,20 @@
 <div class="show">
 <p>
   <strong>タイトル</strong>
-  <%= @schduling.title %>
+  <%= @scheduling.title %>
 </p>
 
 <p>
   <strong>内容</strong>
-  <%= @schduling.content %>
+  <%= @scheduling.content %>
 </p>
 
 <p>
   <strong>日時</strong>
-  <%= @schduling.start_time.strftime("%m-%d") %>
+  <%= @scheduling.start_time.strftime("%m-%d") %>
 </p>
 
-<%= link_to '編集', edit_blog_path(@schduling) %>
-<%= link_to '消去',blog_path(@schduling.id), method: :delete, data: { confirm: '本当に?' } %>
-<%= link_to '戻る', blogs_path %>
+<%= link_to '編集', edit_scheduling_path(@scheduling) %>
+<%= link_to '消去',scheduling_path(@scheduling.id), method: :delete, data: { confirm: '本当に?' } %>
+<%= link_to '戻る', schedulings_path %>
 </div>
